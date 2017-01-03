@@ -1,0 +1,31 @@
+{
+  "description": "A simple extension that when the icon is clicked, will enlarge the description boxes on SpiraTest test cases being executed. You will have to manually click the icon each time you want the descriptions boxes to be enlarged.",
+  "manifest_version": 2,
+  "name": "SpiraTest Box Enlarge",
+  "version": "1.0",
+  "icons": {
+    "48": "icon.png"
+  },
+
+  "applications": {
+    "gecko": {
+      "id": "enlargeSpiraTest@pentaho.com",
+      "strict_min_version": "45.0.0"
+    }
+  },
+
+  "permissions": [
+    "tabs",
+	"activeTab"
+  ],
+  
+  "background": {
+		"scripts": ["enlargeBox.js"],
+		"persistent": false
+	},
+
+  "page_action": {
+    "default_icon": "icon.png",
+    "default_title": "SpiraTest Enlarge"
+  }
+}
